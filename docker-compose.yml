@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   n8n:
@@ -8,7 +8,7 @@ services:
     environment:
       - N8N_HOST=localhost
       - N8N_PROTOCOL=http
-      - N8N_SECURE_COOKIE=false
+      # - N8N_SECURE_COOKIE=false
       - GENERIC_TIMEZONE=Europe/Rome
     volumes:
       - n8n_data:/home/node/.n8n
