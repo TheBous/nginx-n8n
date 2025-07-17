@@ -11,8 +11,10 @@ services:
       # - N8N_SECURE_COOKIE=false
       # - NODE_FUNCTION_ALLOW_BUILTIN=crypto,fs,http,https,net,os,path,util,url,zlib
       - GENERIC_TIMEZONE=Europe/Rome
+      - N8N_CUSTOM_EXTENSIONS=/home/node/.n8n/custom
     volumes:
       - n8n_data:/home/node/.n8n
+      - ./custom/original-node:/home/node/.n8n/custom/original-node
     command: "start --tunnel"
     networks:
       - n8n_network
